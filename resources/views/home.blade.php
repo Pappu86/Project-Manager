@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    Pappu testing component
+    Home view
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -19,7 +19,6 @@
             </div>
         </div>
         <example-component></example-component>
-        <projects-list-component></projects-list-component>
     </div>
 </div>
 @endsection
