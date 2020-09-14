@@ -1,5 +1,5 @@
 <template>
-    <h1>This is the projects component</h1>
+    <div>My projects component</div>
 </template>
 
 <script>
