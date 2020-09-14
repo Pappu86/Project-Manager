@@ -3,6 +3,6 @@
 @section('content')
     <div class="container">
         Projects View
-            <projects-list-component></projects-list-component>
+        <router-view></router-view>
     </div>
 @endsection
