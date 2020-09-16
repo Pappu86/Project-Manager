@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    Home view
+    Master layout
     <router-view></router-view>
 {{--    <div class="row justify-content-center">--}}
 {{--        <div class="col-md-8">--}}

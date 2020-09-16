@@ -10,11 +10,39 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-let routes = [
-    { path: '/home', component: require('./components/projects/HomeComponent.vue').default },
-    { path: '/dashboard', component: require('./components/ExampleComponent.vue').default },
-    { path: '/projects', component: require('./components/projects/ProjectsComponent.vue').default }
-]
+import Home from './components/projects/HomeComponent.vue';
+import Dashboard from './components/ExampleComponent.vue';
+import Projects from './components/projects/ProjectsComponent.vue';
+
+//
+// let routes = [
+//     { path: '/home', component: require('./components/projects/HomeComponent.vue').default },
+//     { path: '/dashboard', component: require('./components/ExampleComponent.vue').default },
+//     { path: '/projects', component: require('./components/projects/ProjectsComponent.vue').default }
+// ]
+
+const routes = [
+    {
+        name: '',
+        path: '/',
+        component: Home
+    },
+    {
+        name: 'home',
+        path: '/home',
+        component: Home
+    },
+    {
+        name: 'dashboard',
+        path: '/dashboard',
+        component: Dashboard
+    },
+    {
+        name: 'projects',
+        path: '/projects',
+        component: Projects
+    }
+];
 
 // Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
