@@ -52874,6 +52874,9 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _components_projects_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/projects/HomeComponent.vue */ "./resources/js/components/projects/HomeComponent.vue");
+/* harmony import */ var _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue");
+/* harmony import */ var _components_projects_ProjectsComponent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/projects/ProjectsComponent.vue */ "./resources/js/components/projects/ProjectsComponent.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -52884,15 +52887,31 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+ //
+// let routes = [
+//     { path: '/home', component: require('./components/projects/HomeComponent.vue').default },
+//     { path: '/dashboard', component: require('./components/ExampleComponent.vue').default },
+//     { path: '/projects', component: require('./components/projects/ProjectsComponent.vue').default }
+// ]
+
 var routes = [{
+  name: '',
+  path: '/',
+  component: _components_projects_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+}, {
+  name: 'home',
   path: '/home',
-  component: __webpack_require__(/*! ./components/projects/HomeComponent.vue */ "./resources/js/components/projects/HomeComponent.vue")["default"]
+  component: _components_projects_HomeComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
+  name: 'dashboard',
   path: '/dashboard',
-  component: __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]
+  component: _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
+  name: 'projects',
   path: '/projects',
-  component: __webpack_require__(/*! ./components/projects/ProjectsComponent.vue */ "./resources/js/components/projects/ProjectsComponent.vue")["default"]
+  component: _components_projects_ProjectsComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }]; // Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's
 // keep it simple for now.
