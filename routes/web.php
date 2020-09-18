@@ -19,9 +19,14 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/{any}', function () {
-    return view('home');
-})->where('any', '.*');
+Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/projects', 'ProjectsController@index')->name('projects');
+
+//
+//Route::get('/{any}', function () {
+//    return view('home');
+//})->where('any', '.*');
 
 
 //Route::get('/home', 'HomeController@index')->name('home');

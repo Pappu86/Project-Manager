@@ -10,9 +10,9 @@ window.Vue = require('vue');
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
-import Home from './components/projects/HomeComponent.vue';
-import Dashboard from './components/ExampleComponent.vue';
-import Projects from './components/projects/ProjectsComponent.vue';
+import Home from './components/project/HomeComponent.vue';
+import Dashboard from './components/project/DashboardComponent';
+import Projects from './components/project/ProjectsComponent.vue';
 
 //
 // let routes = [
@@ -25,7 +25,7 @@ const routes = [
     {
         name: '',
         path: '/',
-        component: Home
+        component: Dashboard
     },
     {
         name: 'home',
