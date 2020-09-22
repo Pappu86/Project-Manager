@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
+});
+
 Route::get('/', 'DashboardController@index')->name('dashboard');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/projects', 'ProjectsController@index')->name('projects');
