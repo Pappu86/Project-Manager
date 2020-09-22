@@ -9,7 +9,6 @@
             <li><a href="{{ url('/projects') }}">Projects</a></li>
         </ul>
     </div>
-    Main layout
     <router-view></router-view>
 </div>
 @endsection
