@@ -6,12 +6,23 @@
                     <div class="card-header">Users</div>
 
                     <div class="card-body">
-                        <div v-for="user in users" :key="user.id">
-                            {{user.name}}={{user.email}}
-                        </div>
-<!--                        @foreach ($users as $user)-->
-<!--                        {{ $user->name }}-->
-<!--                        @endforeach-->
+                        <table class="table">
+                            <thead class="thead-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-for="user in users" :key="user.id">
+                                <td>{{user.name}}</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+<!--                        <div v-for="user in users" :key="user.id">-->
+<!--                            {{user.name}}:{{user.email}}-->
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -23,10 +34,7 @@
     export default {
         props: ['users'],
         data() {
-            console.log("data print", this.users);
-            return {
-                //users:this.users
-            }
+            return {}
         },
         mounted() {
             console.log('Component mounted.')
