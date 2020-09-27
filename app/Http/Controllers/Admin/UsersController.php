@@ -15,7 +15,12 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return "This is admin users page";
+        $users=User::all();
+        echo "<pre>";
+        //print_r( $users);
+        echo "</pre>";
+
+        return view('admin.users.index')->with('users', $users);
     }
 
     /**

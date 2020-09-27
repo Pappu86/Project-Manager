@@ -13,13 +13,7 @@ Vue.use(VueRouter);
 import Home from './components/project/HomeComponent.vue';
 import Dashboard from './components/project/DashboardComponent';
 import Projects from './components/project/ProjectsComponent.vue';
-
-//
-// let routes = [
-//     { path: '/home', component: require('./components/projects/HomeComponent.vue').default },
-//     { path: '/dashboard', component: require('./components/ExampleComponent.vue').default },
-//     { path: '/projects', component: require('./components/projects/ProjectsComponent.vue').default }
-// ]
+import Users from './components/admin/UsersComponent.vue';
 
 const routes = [
     {
@@ -41,6 +35,11 @@ const routes = [
         name: 'projects',
         path: '/projects',
         component: Projects
+    },
+    {
+        name:'users',
+        path:'/admin/users',
+        component: Users
     }
 ];
 
@@ -62,6 +61,8 @@ const router = new VueRouter({
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.component('user-list', require('./components/admin/UsersComponent.vue').default);
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 //Vue.component('projects-list-component', require('./components/projects/ProjectsComponent.vue').default);
