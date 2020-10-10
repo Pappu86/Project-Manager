@@ -8,11 +8,12 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
+
 Vue.use(VueRouter);
 
-import Home from './components/project/HomeComponent.vue';
-import Dashboard from './components/project/DashboardComponent';
-import Projects from './components/project/ProjectsComponent.vue';
+import Home from './components/projects/HomeComponent.vue';
+import Dashboard from './components/projects/DashboardComponent';
+import Projects from './components/projects/ProjectsComponent.vue';
 import Users from './components/admin/UsersComponent.vue';
 
 const routes = [
@@ -37,8 +38,8 @@ const routes = [
         component: Projects
     },
     {
-        name:'users',
-        path:'/admin/users',
+        name: 'user-list',
+        path: '/admin/users',
         component: Users
     }
 ];
@@ -47,7 +48,7 @@ const routes = [
 // You can pass in additional options here, but let's
 // keep it simple for now.
 const router = new VueRouter({
-    mode:'history',
+    mode: 'history',
     routes // short for `routes: routes`
 })
 
