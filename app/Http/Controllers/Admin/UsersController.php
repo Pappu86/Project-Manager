@@ -17,9 +17,8 @@ class UsersController extends Controller
     {
         $users=User::all();
         echo "<pre>";
-        //print_r( $users);
+        print_r( $users);
         echo "</pre>";
-
         return view('admin.users.index')->with('users', $users);
     }
 
