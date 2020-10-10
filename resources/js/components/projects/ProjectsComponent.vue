@@ -1,13 +1,16 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Projects</div>
-
-                    <div class="card-body">
-                        This is projects component
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="card-title">Projects</h1>
+                    <div class="card-title-button-group">
+                        <a type="button" class="btn btn-primary">Primary</a>
                     </div>
+                </div>
+
+                <div class="card-body">
+                    This is projects component
                 </div>
             </div>
         </div>

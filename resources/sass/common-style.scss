@@ -1,3 +1,7 @@
+.p-20 {
+    padding: 20px;
+}
+
 .layout-box {
     display: table;
     table-layout: fixed;
@@ -26,4 +30,19 @@
     padding: 10px;
     width: 100%;
     background: pink;
+}
+
+.card {
+    .card-header {
+        h1 {
+            float: left;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .card-title-button-group {
+            float: right;
+            margin: 0 15px 0 0;
+        }
+    }
 }

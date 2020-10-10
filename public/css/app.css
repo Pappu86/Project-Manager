@@ -10899,6 +10899,10 @@ a.text-dark:focus {
   }
 }
 
+.p-20 {
+  padding: 20px;
+}
+
 .layout-box {
   display: table;
   table-layout: fixed;
@@ -10927,6 +10931,16 @@ a.text-dark:focus {
   padding: 10px;
   width: 100%;
   background: pink;
+}
+
+.card .card-header h1 {
+  float: left;
+  margin: 0;
+}
+
+.card .card-header .card-title-button-group {
+  float: right;
+  margin: 0 15px 0 0;
 }
 
 html {
