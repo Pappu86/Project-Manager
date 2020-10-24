@@ -26,7 +26,10 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 
 Route::get('/', 'DashboardController@index')->name('dashboard');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/projects', 'ProjectsController@index')->name('projects');
+
+Route::namespace('Projects')->prefix('')->name('.')->group(function () {
+    Route::resource('/projects', 'ProjectsController', ['except' => ['show', 'create', 'store']]);
+});
 
 //
 //Route::get('/{any}', function () {
