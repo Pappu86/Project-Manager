@@ -10903,16 +10903,6 @@ a.text-dark:focus {
   }
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
-.layout-box-cell {
-  background: pink;
-}
-
 .p-20 {
   padding: 20px;
 }
