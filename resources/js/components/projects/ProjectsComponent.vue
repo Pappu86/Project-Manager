@@ -14,9 +14,9 @@
                 </div>
             </div>
         </div>
-        <div>
-            <add-project-modal></add-project-modal>
-        </div>
+<!--        <div>-->
+<!--            <add-project-modal></add-project-modal>-->
+<!--        </div>-->
         <!-- Render modal -->
         <div>
             <div :is="element.component" v-for="element in elements" v-bind="element.props" :key="element.id"

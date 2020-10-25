@@ -10907,9 +10907,14 @@ a.text-dark:focus {
   height: 100%;
 }
 
+.modal {
+  position: absolute !important;
+  z-index: 9999 !important;
+}
+
 .top-fixed-header {
   width: 100%;
-  z-index: 9;
+  z-index: 2;
   position: fixed;
   top: 0;
 }

@@ -1972,8 +1972,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'add-project-modal',
+  props: ['id', 'data'],
   data: function data() {
     return {};
   },
@@ -37753,70 +37776,78 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    {
+      staticClass: "modal",
+      staticStyle: { display: "none" },
+      attrs: {
+        id: _vm.id,
+        tabindex: "-1",
+        role: "dialog",
+        "aria-labelledby": "ajaxModal",
+        "aria-hidden": "true"
+      }
+    },
+    [_vm._m(0)]
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "modal", attrs: { tabindex: "-1", role: "dialog" } },
-      [
-        _c(
-          "div",
-          { staticClass: "modal-dialog", attrs: { role: "document" } },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _c("div", { staticClass: "modal-header" }, [
-                _c("h5", { staticClass: "modal-title" }, [
-                  _vm._v("Modal title")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "close",
-                    attrs: {
-                      type: "button",
-                      "data-dismiss": "modal",
-                      "aria-label": "Close"
-                    }
-                  },
-                  [
-                    _c("span", { attrs: { "aria-hidden": "true" } }, [
-                      _vm._v("×")
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _c("p", [_vm._v("Modal body text goes here.")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-footer" }, [
-                _c(
-                  "button",
-                  { staticClass: "btn btn-primary", attrs: { type: "button" } },
-                  [_vm._v("Save changes")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { type: "button", "data-dismiss": "modal" }
-                  },
-                  [_vm._v("Close")]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "modal-dialog mini-modal" }, [
+      _c("div", { staticClass: "modal-content" }, [
+        _c("div", { staticClass: "modal-header" }, [
+          _c(
+            "button",
+            {
+              staticClass: "close",
+              attrs: {
+                type: "button",
+                "data-dismiss": "modal",
+                "aria-label": "Close"
+              }
+            },
+            [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "h4",
+            {
+              staticClass: "modal-title",
+              attrs: {
+                id: "ajaxModalTitle",
+                "data-title": "RISE - Ultimate Project Manager"
+              }
+            },
+            [_vm._v("Add\n                    project")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "ajaxModalContent" } }, [
+          _vm._v("fdghfdgfdgfdgfdg")
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "ajaxModalOriginalContent" } }, [
+          _c("div", { staticClass: "original-modal-body" }, [
+            _c("div", { staticClass: "circle-loader" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "modal-footer" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-default",
+                attrs: { type: "button", "data-dismiss": "modal" }
+              },
+              [_vm._v("Close")]
+            )
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -37903,19 +37934,17 @@ var render = function() {
         _vm._l(_vm.projects, function(project) {
           return _c("div", { key: project.id }, [
             _vm._v(
-              "\n                " +
+              "\n                    " +
                 _vm._s(project.name) +
                 ":" +
                 _vm._s(project.status) +
-                "\n            "
+                "\n                "
             )
           ])
         }),
         0
       )
     ]),
-    _vm._v(" "),
-    _c("div", [_c("add-project-modal")], 1),
     _vm._v(" "),
     _c(
       "div",
