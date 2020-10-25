@@ -5,22 +5,75 @@
                 <div class="card-header">
                     <h1 class="card-title">Projects</h1>
                     <div class="card-title-button-group">
-                        <a type="button" class="btn btn-primary">Primary</a>
+                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">add
+                            project</a>
                     </div>
                 </div>
 
                 <div class="card-body">
-                    This is projects component
+                    <div v-for="project in projects" :key="project.id">
+                        {{project.name}}:{{project.status}}
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!--        <div>-->
+        <!--            <add-project-modal></add-project-modal>-->
+        <!--        </div>-->
+        <!-- Render modal -->
+        <!--        <div>-->
+        <!--            <div :is="element.component" v-for="element in elements" v-bind="element.props" :key="element.id"-->
+        <!--                 @customEvent="elementEvent" style="display: none;"></div>-->
+        <!--        </div>-->
     </div>
 </template>
 
 <script>
+    //import AddProjectModal from './AddProjectModal.vue';
+    //import showModal from './modal.js';
+
     export default {
+        name: 'project-list',
+        props: ['projects'],
+        data: function () {
+            return {
+                elements: []
+            }
+        },
+        components: {
+            //AddProjectModal
+        },
+        methods: {
+            addProject: function (event) {
+                console.log("this", event);
+
+                // let id = '12345',
+                //     instance = this;
+                // instance.elements.push({component: 'add-project-modal', props: {id: id, data: {}}});
+                //
+                // $('#' + id).parent().show();
+                //
+                // console.log("instance.elements", instance.elements);
+                //
+                // setTimeout(function () {
+                //     $('#' + id).modal('show');
+                //
+                //
+                //     $('#' + id).on('hidden.bs.modal', function () {
+                //         $('#' + id).remove();
+                //     });
+                // }, 200);
+
+                //let data = {};
+                //showModal(this, "add-project-modal", data);
+            },
+            elementEvent: function (data, type) {
+
+            }
+        },
         mounted() {
-            console.log('Component mounted.')
+            console.log('Projects Component mounted.')
         }
     }
 </script>
