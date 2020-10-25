@@ -20,8 +20,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="app">
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<div id="app" class="clearfix">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm top-fixed-header">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Project Manager') }}
