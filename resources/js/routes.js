@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 import Home from "./components/projects/HomeComponent";
 import Users from "./components/admin/UsersComponent";
 import Projects from './components/projects/ProjectsComponent.vue';
+import AddProjectModal from './components/projects/AddProjectModal.vue';
 
 const router = new VueRouter({
     mode: 'history',

@@ -94,6 +94,16 @@
             </div>
         </div>
     </main>
+    <!--- Start Modal --->
+    <div class="modal fade" id="dynamic-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <!--- End Modal --->
 </div>
 </body>
 </html>

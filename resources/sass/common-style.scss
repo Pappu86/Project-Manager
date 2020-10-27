@@ -2,11 +2,6 @@
     height: 100%;
 }
 
-.modal{
-    position: absolute !important;
-    z-index: 9999 !important;
-}
-
 .top-fixed-header {
     width: 100%;
     z-index: 2;
@@ -30,7 +25,6 @@
     height: 93%;
     top: 55px;
     position: relative;
-    z-index: 1;
 
     .layout-box-cell {
         vertical-align: top;

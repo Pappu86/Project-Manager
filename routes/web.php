@@ -31,6 +31,13 @@ Route::namespace('Projects')->prefix('')->name('.')->group(function () {
     Route::resource('/projects', 'ProjectsController', ['except' => ['show', 'create', 'store']]);
 });
 
+Route::get('/getRequest', function () {
+    if (Request::ajax()) {
+        return view('projects/addProjectForm');
+        //return '<div>TEst data</div>';
+    }
+});
+
 //
 //Route::get('/{any}', function () {
 //    return view('home');
