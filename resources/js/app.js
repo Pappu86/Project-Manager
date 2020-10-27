@@ -12,3 +12,9 @@ const app = new Vue({
     el: '#app',
     router: Router
 });
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-Token': $('meta[name="_token"]').attr('content')
+    }
+});

@@ -24,11 +24,18 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-Route::get('/', 'DashboardController@index')->name('dashboard');
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/', 'HomeController@index')->name('dashboard');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 Route::namespace('Projects')->prefix('')->name('.')->group(function () {
     Route::resource('/projects', 'ProjectsController', ['except' => ['show', 'create', 'store']]);
+});
+
+Route::get('/getRequest', function () {
+    if (Request::ajax()) {
+        return view('projects/addProjectForm');
+        //return '<div>TEst data</div>';
+    }
 });
 
 //
